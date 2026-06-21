@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>第 113 周 · P6 冲刺期 · 训练日历</title>
+<title>第 113 周 · P6 冲刺期 · 训练 + 饮食日历</title>
 <style>
 :root{--ink:#1a1d1f;--paper:#faf9f5;--panel:#fff;--line:#e4e1d8;--muted:#6b7280;--green:#0b6e4f;--green-d:#074d37;--green-s:#e6f2ec;--amber:#b7791f;--amber-s:#fbf0dc;--terra:#b8431f;--terra-s:#fbece5;--blue:#5b9bd5}
 @media(prefers-color-scheme:dark){:root{--ink:#e8e6df;--paper:#16181a;--panel:#1e2123;--line:#2e3236;--muted:#9ca3af;--green:#3dd28a;--green-d:#7eecb0;--green-s:#13251e;--amber:#e0b252;--amber-s:#241d10;--terra:#e87a52;--terra-s:#2a1812}}
@@ -41,6 +41,28 @@ h1{font-size:25px;margin:0 0 6px}
 .ctitle{font-size:13px;font-weight:700;margin:1px 0}
 .cmeta{font-size:12px;color:var(--muted);margin-bottom:5px}
 .cdesc{font-size:12px;opacity:.85;margin-top:auto}
+.exd{margin-top:8px}
+.exd summary{cursor:pointer;font-size:11px;color:var(--amber);font-weight:600;list-style:none}
+.exd summary::before{content:"▸ ";content:"▸ "}
+.exd[open] summary::before{content:"▾ "}
+.exd[open] summary{margin-bottom:6px}
+.exd ul{list-style:none;padding:0;margin:0}
+.exd li{font-size:11px;margin:5px 0;padding:6px 8px;background:var(--amber-s);border-radius:6px;line-height:1.45}
+.exd .rm{color:var(--terra);font-weight:700;margin-left:4px}
+.exd .rc{color:var(--ink);opacity:.85}
+section.diet{padding:14px 0 8px}
+.diet h2{font-size:17px;margin:0 0 10px}
+.dgrid{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
+@media(max-width:980px){.dgrid{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:680px){.dgrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:420px){.dgrid{grid-template-columns:1fr}}
+.dcard{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px;font-size:12px}
+.dday{font-weight:700;color:var(--green-d);margin-bottom:6px}
+.dday small{color:var(--muted);font-weight:400;font-size:10px;display:block;margin-top:1px}
+.dmeal{margin:5px 0;line-height:1.45}
+.dmeal span{display:inline-block;width:18px;height:18px;line-height:18px;text-align:center;background:var(--green-s);color:var(--green-d);border-radius:4px;font-size:10px;font-weight:700;margin-right:5px;vertical-align:middle}
+.dnote{margin-top:6px;font-size:11px;color:var(--amber);border-top:1px dashed var(--line);padding-top:5px}
+.rule{font-size:12px;color:var(--muted);margin:10px 2px 0;line-height:1.7}
 .notes{padding:12px 0 40px}
 .notes h2{font-size:17px;margin:0 0 8px}
 .notes ul{padding-left:18px;margin:0}
@@ -61,6 +83,7 @@ footer a{color:var(--green);text-decoration:none}
       <div class="t">FTP<b>~210 W</b></div>
       <div class="t">周末长骑<b>112 km</b>约 249min</div>
       <div class="t">周训练量<b>~9.1h</b></div>
+      <div class="t">饮食<b>~2100 kcal · 130g 蛋白</b></div>
     </div>
     
     
@@ -74,6 +97,7 @@ footer a{color:var(--green);text-decoration:none}
       <div class="ctitle">休息</div>
       <div class="cmeta">—</div>
       <div class="cdesc">&nbsp;</div>
+      
     </div>
     <div class="card ride">
       <div class="cday">周二<small>08-15</small></div>
@@ -81,13 +105,15 @@ footer a{color:var(--green);text-decoration:none}
       <div class="ctitle">阈值稳定输出 3×12min</div>
       <div class="cmeta">75min · Z4</div>
       <div class="cdesc">12min@Z4 ×3,30km/h 配速打磨</div>
+      
     </div>
     <div class="card strength">
       <div class="cday">周三<small>08-16</small></div>
       <span class="cbadge">力量</span>
-      <div class="ctitle">力量训练 ①</div>
+      <div class="ctitle">力量 A</div>
       <div class="cmeta">40min</div>
-      <div class="cdesc">维持肌力,不追求增肌</div>
+      <div class="cdesc">强化自重,见动作指导</div>
+      <details class="exd"><summary>动作指导 · 7 个动作</summary><ul><li><b>辅助单腿深蹲</b><span class="rm">3×6–8/腿</span><br><span class="rc">扶墙/椅子辅助;单腿下蹲至大腿水平、控制 2s 起;另腿前伸(手枪蹲进阶)</span></li><li><b>窄距俯卧撑</b><span class="rm">3×15</span><br><span class="rc">双手与肩同宽偏窄,刺激三头;控制下降 2s</span></li><li><b>单腿臀桥</b><span class="rm">3×15/腿</span><br><span class="rc">顶端停 2s</span></li><li><b>平板支撑 + 抬腿</b><span class="rm">3×60s</span><br><span class="rc">平板中交替抬单腿,增加抗旋转负荷</span></li><li><b>仰卧抬腿</b><span class="rm">3×15</span><br><span class="rc">下落慢、腰贴地</span></li><li><b>鸟狗式 + 抗旋</b><span class="rm">3×15/侧</span><br><span class="rc">停留 2s</span></li><li><b>登山者</b><span class="rm">3×40s</span><br><span class="rc">加速、维持核心稳定</span></li></ul></details>
     </div>
     <div class="card ride">
       <div class="cday">周四<small>08-17</small></div>
@@ -95,6 +121,7 @@ footer a{color:var(--green);text-decoration:none}
       <div class="ctitle">VO2max 维持 4×3min</div>
       <div class="cmeta">75min · Z4–Z5</div>
       <div class="cdesc">保持顶端 VO2</div>
+      
     </div>
     <div class="card ride">
       <div class="cday">周五<small>08-18</small></div>
@@ -102,6 +129,7 @@ footer a{color:var(--green);text-decoration:none}
       <div class="ctitle">Z2 轻松</div>
       <div class="cmeta">45min · Z2</div>
       <div class="cdesc">主动恢复 / 技术</div>
+      
     </div>
     <div class="card long">
       <div class="cday">周六<small>08-19</small></div>
@@ -109,14 +137,69 @@ footer a{color:var(--green);text-decoration:none}
       <div class="ctitle">100km 节奏骑</div>
       <div class="cmeta">250min · Z3</div>
       <div class="cdesc">本周长骑 112 km @ 目标配速,节奏控制 > 爆发</div>
+      
     </div>
     <div class="card recovery">
       <div class="cday">周日<small>08-20</small></div>
-      <span class="cbadge">恢复</span>
-      <div class="ctitle">Z1 恢复 或 力量 ②</div>
+      <span class="cbadge">恢复/力量</span>
+      <div class="ctitle">恢复骑 或 力量 B</div>
       <div class="cmeta">60min · Z1</div>
-      <div class="cdesc">&nbsp;</div>
+      <div class="cdesc">主动恢复,或自重核心 B</div>
+      <details class="exd"><summary>动作指导 · 5 个动作</summary><ul><li><b>平板支撑</b><span class="rm">3×60s</span><br><span class="rc">或单手平板进阶</span></li><li><b>侧平板 + 抬髋</b><span class="rm">2×12/侧</span><br><span class="rc">髋部上下动态抗侧屈</span></li><li><b>死虫</b><span class="rm">3×12/侧</span><br><span class="rc">慢节奏</span></li><li><b>仰卧抬腿</b><span class="rm">3×15</span><br><span class="rc">下腹</span></li><li><b>髋屈肌 + 股四 + 臀 拉伸</b><span class="rm">各 30s/侧</span><br><span class="rc">骑兵式 / 站姿抓踝 / 坐姿鸽</span></li></ul></details>
     </div></div>
+  <section class="diet"><h2>🍽 每日饮食 · ~2100 kcal / 130–140g 蛋白</h2>
+    <div class="dgrid"><div class="dcard">
+      <div class="dday">周一<small>08-14</small></div>
+      <div class="dmeal"><span>早</span>2 水煮蛋 + 1 菜包 + 无糖豆浆</div>
+      <div class="dmeal"><span>午</span>黄焖鸡(少汁、饭吃一半)+ 烫青菜</div>
+      <div class="dmeal"><span>加</span>无糖希腊酸奶 1 杯</div>
+      <div class="dmeal"><span>晚</span>清汤牛肉面(不喝汤)+ 卤蛋</div>
+      <div class="dnote">休息日:主食再减 1/3,蛋白保持</div>
+    </div><div class="dcard">
+      <div class="dday">周二<small>08-15</small></div>
+      <div class="dmeal"><span>早</span>2 水煮蛋 + 1 全麦面包 + 无糖豆浆</div>
+      <div class="dmeal"><span>午</span>番茄炒蛋盖饭(饭吃一半)+ 凉拌菜</div>
+      <div class="dmeal"><span>加</span>即食鸡胸 半袋(~20g 蛋白)</div>
+      <div class="dmeal"><span>晚</span>板烧鸡腿堡 + 蔬菜沙拉(少酱)</div>
+      <div class="dnote">训练后 30min 内补 30g 蛋白</div>
+    </div><div class="dcard">
+      <div class="dday">周三<small>08-16</small></div>
+      <div class="dmeal"><span>早</span>1 菜包 + 1 水煮蛋 + 无糖希腊酸奶</div>
+      <div class="dmeal"><span>午</span>清蒸鱼饭(饭吃一半)+ 白灼生菜</div>
+      <div class="dmeal"><span>加</span>蛋白粉 1 勺 + 水</div>
+      <div class="dmeal"><span>晚</span>阳春面 + 卤蛋 + 烫青菜</div>
+      <div class="dnote">训练后 30min 内补 30g 蛋白</div>
+    </div><div class="dcard">
+      <div class="dday">周四<small>08-17</small></div>
+      <div class="dmeal"><span>早</span>燕麦粥 + 1 水煮蛋 + 黑咖(无糖)</div>
+      <div class="dmeal"><span>午</span>照烧鸡腿饭(饭吃一半)+ 沙拉(少酱)</div>
+      <div class="dmeal"><span>加</span>2 个水煮蛋</div>
+      <div class="dmeal"><span>晚</span>虾仁/三鲜饺 15 只 + 凉拌菜</div>
+      <div class="dnote">训练后 30min 内补 30g 蛋白</div>
+    </div><div class="dcard">
+      <div class="dday">周五<small>08-18</small></div>
+      <div class="dmeal"><span>早</span>2 水煮蛋 + 1 菜包 + 无糖豆浆</div>
+      <div class="dmeal"><span>午</span>黄焖鸡(少汁、饭吃一半)+ 烫青菜</div>
+      <div class="dmeal"><span>加</span>无糖希腊酸奶 1 杯</div>
+      <div class="dmeal"><span>晚</span>清汤牛肉面(不喝汤)+ 卤蛋</div>
+      <div class="dnote">训练后 30min 内补 30g 蛋白</div>
+    </div><div class="dcard">
+      <div class="dday">周六<small>08-19</small></div>
+      <div class="dmeal"><span>早</span>2 水煮蛋 + 1 全麦面包 + 无糖豆浆</div>
+      <div class="dmeal"><span>午</span>番茄炒蛋盖饭(饭吃一半)+ 凉拌菜</div>
+      <div class="dmeal"><span>加</span>即食鸡胸 半袋(~20g 蛋白)</div>
+      <div class="dmeal"><span>晚</span>板烧鸡腿堡 + 蔬菜沙拉(少酱)</div>
+      <div class="dnote">长骑后 30min:1 根香蕉 + 30g 蛋白(碳:蛋≈4:1)</div>
+    </div><div class="dcard">
+      <div class="dday">周日<small>08-20</small></div>
+      <div class="dmeal"><span>早</span>1 菜包 + 1 水煮蛋 + 无糖希腊酸奶</div>
+      <div class="dmeal"><span>午</span>清蒸鱼饭(饭吃一半)+ 白灼生菜</div>
+      <div class="dmeal"><span>加</span>蛋白粉 1 勺 + 水</div>
+      <div class="dmeal"><span>晚</span>阳春面 + 卤蛋 + 烫青菜</div>
+      <div class="dnote">训练后 30min 内补 30g 蛋白</div>
+    </div></div>
+    <p class="rule"><b>三条铁律</b>:① 饭/面只吃一半 ② 汁汤酱不拌饭 ③ 训练后 30min 补 30g 蛋白。已喝白水/茶(每日 2–3L)。</p>
+  </section>
   <section class="notes">
     <h2>本周提示</h2>
     <ul><li>阈值稳定输出课打磨 30km/h 配速</li><li>节奏控制 > 爆发,前 80km 压住冲动</li><li>高温天清晨骑,补水补电解质</li><li>哮喘药随身,冷空气戴魔术头巾</li></ul>
