@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>第 66 周 · P5 突破期 · 训练日历</title>
+<style>
+:root{--ink:#1a1d1f;--paper:#faf9f5;--panel:#fff;--line:#e4e1d8;--muted:#6b7280;--green:#0b6e4f;--green-d:#074d37;--green-s:#e6f2ec;--amber:#b7791f;--amber-s:#fbf0dc;--terra:#b8431f;--terra-s:#fbece5;--blue:#5b9bd5}
+@media(prefers-color-scheme:dark){:root{--ink:#e8e6df;--paper:#16181a;--panel:#1e2123;--line:#2e3236;--muted:#9ca3af;--green:#3dd28a;--green-d:#7eecb0;--green-s:#13251e;--amber:#e0b252;--amber-s:#241d10;--terra:#e87a52;--terra-s:#2a1812}}
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;font-size:15px}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+header{padding:26px 0 16px;border-bottom:1px solid var(--line)}
+.nav{display:flex;justify-content:space-between;gap:10px;font-size:13px;margin-bottom:14px;flex-wrap:wrap}
+.nav a{color:var(--green);text-decoration:none}
+.eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 4px}
+h1{font-size:25px;margin:0 0 6px}
+.focus{color:var(--muted);margin:0 0 14px;font-size:14px}
+.targets{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.t{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:7px 12px;font-size:12px;color:var(--muted)}
+.t b{display:block;font-size:15px;color:var(--ink)}
+.banner{padding:10px 14px;border-radius:8px;font-size:13px;margin:10px 0}
+.banner.deload{background:var(--amber-s);color:var(--amber);border-left:4px solid var(--amber)}
+.banner.ms{background:var(--green-s);color:var(--green-d);border-left:4px solid var(--green);font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;padding:20px 0 8px}
+@media(max-width:980px){.grid{grid-template-columns:repeat(4,1fr)}}
+@media(max-width:680px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:420px){.grid{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px;min-height:158px;display:flex;flex-direction:column}
+.card.rest{opacity:.55}
+.card.long{border-top:4px solid var(--green)}
+.card.ride{border-top:4px solid var(--green-d)}
+.card.strength{border-top:4px solid var(--amber)}
+.card.recovery{border-top:4px solid var(--blue)}
+.cday{font-size:13px;font-weight:700;color:var(--green-d)}
+.card.rest .cday{color:var(--muted)}
+.cday small{color:var(--muted);font-weight:400;font-size:11px;display:block;margin-top:1px}
+.cbadge{display:inline-block;font-size:10px;padding:2px 8px;border-radius:99px;margin:6px 0 4px;align-self:flex-start;background:var(--green-s);color:var(--green-d);font-weight:600}
+.card.strength .cbadge{background:var(--amber-s);color:var(--amber)}
+.card.rest .cbadge{background:var(--line);color:var(--muted)}
+.card.recovery .cbadge{background:#e8f1f8;color:#3a6f9e}
+.ctitle{font-size:13px;font-weight:700;margin:1px 0}
+.cmeta{font-size:12px;color:var(--muted);margin-bottom:5px}
+.cdesc{font-size:12px;opacity:.85;margin-top:auto}
+.notes{padding:12px 0 40px}
+.notes h2{font-size:17px;margin:0 0 8px}
+.notes ul{padding-left:18px;margin:0}
+.notes li{margin:5px 0;font-size:14px}
+footer{padding:18px 0 36px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:13px;gap:10px;flex-wrap:wrap}
+footer a{color:var(--green);text-decoration:none}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="nav"><a href="week-065.html">← 第 65 周</a><a href="../index.html">▲ 全部 156 周总览</a><a href="week-067.html">第 67 周 →</a></div>
+    <p class="eyebrow">P5 突破期 · 2027-09-20 ~ 2027-09-26 · 常规训练周</p>
+    <h1>第 66 周</h1>
+    <p class="focus">焦点:功率质变,冲 27–28km/h</p>
+    <div class="targets">
+      <div class="t">体重<b>62.2 kg · 124 斤</b></div>
+      <div class="t">FTP<b>~198 W</b></div>
+      <div class="t">周末长骑<b>105 km</b>约 252min</div>
+      <div class="t">周训练量<b>~9.1h</b></div>
+    </div>
+    
+    
+  </div>
+</header>
+<main class="wrap">
+  <div class="grid">
+    <div class="card rest">
+      <div class="cday">周一<small>09-20</small></div>
+      <span class="cbadge">休息</span>
+      <div class="ctitle">休息</div>
+      <div class="cmeta">—</div>
+      <div class="cdesc">&nbsp;</div>
+    </div>
+    <div class="card ride">
+      <div class="cday">周二<small>09-21</small></div>
+      <span class="cbadge">骑行</span>
+      <div class="ctitle">VO2max 5×3min</div>
+      <div class="cmeta">75min · Z4–Z5</div>
+      <div class="cdesc">3min@Z5 ×5,组间 3min;功体比质变课</div>
+    </div>
+    <div class="card strength">
+      <div class="cday">周三<small>09-22</small></div>
+      <span class="cbadge">力量</span>
+      <div class="ctitle">力量训练 ①</div>
+      <div class="cmeta">40min</div>
+      <div class="cdesc">加入单腿蹲 / 硬拉进阶</div>
+    </div>
+    <div class="card ride">
+      <div class="cday">周四<small>09-23</small></div>
+      <span class="cbadge">骑行</span>
+      <div class="ctitle">甜区 2×20min</div>
+      <div class="cmeta">75min · Z3</div>
+      <div class="cdesc">20min@甜区 ×2,阈值巩固</div>
+    </div>
+    <div class="card ride">
+      <div class="cday">周五<small>09-24</small></div>
+      <span class="cbadge">骑行</span>
+      <div class="ctitle">Z2 技术(可选)</div>
+      <div class="cmeta">45min · Z2</div>
+      <div class="cdesc">可选;睡眠差或疲劳则跳过,勿硬上</div>
+    </div>
+    <div class="card long">
+      <div class="cday">周六<small>09-25</small></div>
+      <span class="cbadge">长骑 ★</span>
+      <div class="ctitle">长距离 LSD(含爬坡)</div>
+      <div class="cmeta">250min · Z2–Z3</div>
+      <div class="cdesc">本周长骑 105 km,加入 2–3 段坡(江浙丘陵)</div>
+    </div>
+    <div class="card recovery">
+      <div class="cday">周日<small>09-26</small></div>
+      <span class="cbadge">恢复</span>
+      <div class="ctitle">Z1 恢复 或 力量 ②</div>
+      <div class="cmeta">60min · Z1</div>
+      <div class="cdesc">&nbsp;</div>
+    </div></div>
+  <section class="notes">
+    <h2>本周提示</h2>
+    <ul><li>VO2max 课是功体比质变关键,组间充分回收</li><li>加入爬坡专项(江浙丘陵路段)</li><li>周五可选课:睡眠差则跳过,勿硬上</li><li>第 104 周做第二次年度校准</li></ul>
+  </section>
+</main>
+<footer class="wrap"><a href="week-065.html">← 第 65 周</a><a href="week-067.html">第 67 周 →</a></footer>
+</body>
+</html>
