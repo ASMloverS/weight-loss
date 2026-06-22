@@ -1,0 +1,14 @@
+{
+  "name": "weight-loss-plan-tools",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Build tooling for the cycling training plan static site (data extraction only).",
+  "scripts": {
+    "extract": "node scripts/extract-plans.cjs",
+    "test": "node scripts/test-mapping.cjs",
+    "build-index": "node scripts/build-index.cjs"
+  },
+  "devDependencies": {
+    "cheerio": "^1.0.0"
+  }
+}

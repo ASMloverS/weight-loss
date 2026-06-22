@@ -12,3 +12,11 @@ Desktop.ini
 
 # Local notes / scratch
 *.tmp
+
+# Node (build tooling only)
+node_modules/
+package-lock.json
+
+# Generated artifacts (regenerable via `npm run extract`)
+plans/plan-data.json
+plans/plan-data.js
