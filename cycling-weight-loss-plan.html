@@ -6,20 +6,25 @@
 <title>公路车长期训练减脂计划 · 12–30 个月路线图</title>
 <style>
   :root{
-    --ink:#1a1d1f; --paper:#faf9f5; --panel:#fff;
+    --ink:#1a1d1f; --paper:#f6f4ec; --panel:#fff;
     --line:#e4e1d8; --muted:#6b7280; --faint:#9aa0a6;
     --green:#0b6e4f; --green-soft:#e6f2ec; --green-deep:#074d37;
     --terra:#b8431f; --terra-soft:#fbece5;
     --amber:#b7791f; --amber-soft:#fbf0dc;
     --maxw:1080px;
+    --shadow-sm:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.04);
+    --shadow-md:0 4px 12px rgba(16,24,40,.08),0 2px 4px rgba(16,24,40,.04);
+    --shadow-lg:0 12px 28px rgba(16,24,40,.12),0 4px 8px rgba(16,24,40,.06);
   }
   @media (prefers-color-scheme:dark){
-    :root{ --ink:#e8e6df; --paper:#16181a; --panel:#1e2123; --line:#2e3236;
+    :root{ --ink:#ece9df; --paper:#131516; --panel:#1c1f21; --line:#2c3035;
       --muted:#9ca3af; --faint:#6b7280; --green:#3dd28a; --green-soft:#13251e;
       --green-deep:#7eecb0; --terra:#e87a52; --terra-soft:#2a1812;
-      --amber:#e0b252; --amber-soft:#241d10; }
+      --amber:#e0b252; --amber-soft:#241d10;
+      --shadow-sm:0 1px 2px rgba(0,0,0,.4); --shadow-md:0 4px 12px rgba(0,0,0,.5); --shadow-lg:0 12px 28px rgba(0,0,0,.6); }
   }
   *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
   html,body{margin:0;padding:0}
   body{
     background:var(--paper); color:var(--ink);
@@ -29,50 +34,67 @@
   }
   .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px}
   /* header */
-  header.top{padding:48px 0 28px; border-bottom:1px solid var(--line)}
-  .eyebrow{font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--green); font-weight:700; margin:0 0 8px}
-  h1{font-size:clamp(26px,4vw,40px); line-height:1.2; margin:0 0 12px; font-weight:800; letter-spacing:-.01em}
-  .lede{font-size:18px; color:var(--muted); margin:0 0 24px; max-width:62ch}
+  header.top{padding:0;border-bottom:none;background:transparent}
+  header.top > .wrap{position:relative;overflow:hidden;border-radius:18px;margin:22px auto 0;
+    background:linear-gradient(135deg,#074d37 0%,#0b6e4f 55%,#168a4f 100%);
+    box-shadow:var(--shadow-md);color:#fff;padding:32px 30px 28px}
+  header.top > .wrap::after{content:"🚴";position:absolute;right:-14px;bottom:-38px;font-size:180px;opacity:.10;
+    transform:rotate(-12deg);pointer-events:none}
+  @media (prefers-color-scheme:dark){header.top > .wrap{background:linear-gradient(135deg,#13251e 0%,#0b3a28 60%,#1a4d33 100%)}}
+  .eyebrow{font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:#fff; opacity:.78; font-weight:700; margin:0 0 10px}
+  h1{font-size:clamp(28px,4.5vw,42px); line-height:1.18; margin:0 0 12px; font-weight:800; letter-spacing:-.015em}
+  .lede{font-size:17px; color:#fff; opacity:.94; margin:0 0 22px; max-width:64ch}
+  .lede b{color:#fff; background:rgba(255,255,255,.16); padding:1px 6px; border-radius:5px}
   .statrow{display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-top:8px}
-  .stat{background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:14px 16px}
-  .stat .k{font-size:11px; color:var(--muted); letter-spacing:.08em; text-transform:uppercase}
-  .stat .v{font-size:20px; font-weight:700; margin-top:4px}
-  .stat .d{font-size:12px; color:var(--green); margin-top:2px}
+  .stat{background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.18); border-radius:12px; padding:14px 16px;
+    transition:transform .18s,background .18s}
+  .stat:hover{transform:translateY(-2px);background:rgba(255,255,255,.18)}
+  .stat .k{font-size:10px; color:#fff; opacity:.78; letter-spacing:.1em; text-transform:uppercase}
+  .stat .v{font-size:22px; font-weight:800; margin-top:4px; letter-spacing:-.01em}
+  .stat .d{font-size:12px; color:#fff; opacity:.85; margin-top:2px}
   @media (max-width:680px){ .statrow{grid-template-columns:repeat(2,1fr)} }
 
-  section{padding:42px 0; border-bottom:1px solid var(--line)}
+  section{padding:42px 0; border-bottom:1px solid var(--line); animation:secrise .5s cubic-bezier(.2,.7,.3,1) both}
+  section:nth-of-type(2){animation-delay:.05s} section:nth-of-type(3){animation-delay:.10s}
+  section:nth-of-type(4){animation-delay:.15s} section:nth-of-type(5){animation-delay:.20s}
+  @keyframes secrise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
   section:last-of-type{border-bottom:none}
-  h2{font-size:24px; margin:0 0 6px; font-weight:700; letter-spacing:-.01em}
-  h2 .n{color:var(--faint); font-weight:600; font-variant-numeric:tabular-nums; margin-right:8px}
+  h2{font-size:26px; margin:0 0 6px; font-weight:800; letter-spacing:-.012em; display:flex; align-items:center; gap:12px}
+  h2 .n{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;flex:none;
+    background:linear-gradient(135deg,var(--green),var(--green-deep));color:#fff;font-size:15px;font-weight:800;
+    border-radius:11px;box-shadow:var(--shadow-sm);font-variant-numeric:tabular-nums;letter-spacing:0}
   .sec-sub{color:var(--muted); margin:0 0 24px; font-size:15px}
-  h3{font-size:17px; margin:24px 0 8px; font-weight:700}
+  h3{font-size:18px; margin:24px 0 8px; font-weight:700}
 
   /* the convergence chart */
-  .chart-box{background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:20px; margin-top:8px}
+  .chart-box{background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:22px; margin-top:8px; box-shadow:var(--shadow-sm)}
   .chart-box svg{display:block; width:100%; height:auto}
   .chart-cap{font-size:13px; color:var(--muted); margin:12px 2px 0}
   .chart-cap b{color:var(--ink)}
 
   /* timeline strip */
   .tl{display:grid; grid-template-columns:repeat(7,1fr); gap:6px; margin:8px 0 0}
-  .tl .ph{border-radius:8px; padding:10px 8px; text-align:center; cursor:pointer; border:1.5px solid transparent; transition:.15s}
+  .tl .ph{border-radius:10px; padding:12px 8px; text-align:center; cursor:pointer; border:1.5px solid transparent;
+    transition:transform .15s,box-shadow .15s,border-color .15s,background .15s; box-shadow:var(--shadow-sm)}
   .tl .ph .code{font-size:11px; font-weight:800; letter-spacing:.05em}
   .tl .ph .when{font-size:11px; color:var(--muted); margin-top:2px}
   .tl .ph.sel{border-color:var(--green); background:var(--green-soft)}
-  .tl .ph:hover{border-color:var(--green)}
+  .tl .ph:hover{border-color:var(--green); transform:translateY(-2px); box-shadow:var(--shadow-md)}
   @media (max-width:760px){ .tl{grid-template-columns:repeat(4,1fr)} }
 
-  .phase-detail{background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:24px 26px; margin-top:18px}
+  .phase-detail{background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:26px 28px; margin-top:18px; box-shadow:var(--shadow-sm); transition:box-shadow .18s}
+  .phase-detail:hover{box-shadow:var(--shadow-md)}
   .phase-detail .pt{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap}
-  .phase-detail .pt h3{margin:0; font-size:20px}
-  .phase-detail .tag{font-size:12px; padding:3px 9px; border-radius:99px; background:var(--green-soft); color:var(--green-deep); font-weight:600}
+  .phase-detail .pt h3{margin:0; font-size:21px}
+  .phase-detail .tag{font-size:12px; padding:4px 11px; border-radius:99px; background:var(--green-soft); color:var(--green-deep); font-weight:700}
   .phase-detail .meta{color:var(--muted); font-size:13px; margin:6px 0 14px}
 
   table{border-collapse:collapse; width:100%; font-size:14px; margin:10px 0}
-  th,td{text-align:left; padding:9px 12px; border-bottom:1px solid var(--line); vertical-align:top}
-  th{font-weight:700; color:var(--muted); font-size:12px; letter-spacing:.04em; text-transform:uppercase; background:transparent}
+  th,td{text-align:left; padding:10px 12px; border-bottom:1px solid var(--line); vertical-align:top}
+  th{font-weight:700; color:var(--muted); font-size:11px; letter-spacing:.06em; text-transform:uppercase; background:transparent}
+  tbody tr{transition:background .12s}
   tbody tr:hover{background:var(--green-soft)}
-  .day th:first-child,.day td:first-child{font-weight:600; color:var(--green-deep)}
+  .day th:first-child,.day td:first-child{font-weight:700; color:var(--green-deep)}
 
   /* HR zones bar */
   .zones{display:grid; grid-template-columns:repeat(5,1fr); gap:4px; margin:14px 0}
@@ -87,12 +109,14 @@
   /* green/red diet grid */
   .grid2{display:grid; grid-template-columns:repeat(2,1fr); gap:16px}
   @media (max-width:680px){.grid2{grid-template-columns:1fr}}
-  .col{background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:18px 20px}
-  .col h4{margin:0 0 10px; font-size:14px; display:flex; align-items:center; gap:8px}
-  .col.good{border-left:4px solid var(--green)}
-  .col.bad{border-left:4px solid var(--terra)}
+  .col{background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:18px 20px;
+    box-shadow:var(--shadow-sm); transition:transform .18s,box-shadow .18s}
+  .col:hover{transform:translateY(-2px); box-shadow:var(--shadow-md)}
+  .col h4{margin:0 0 10px; font-size:15px; display:flex; align-items:center; gap:8px}
+  .col.good{border-left:5px solid var(--green)}
+  .col.bad{border-left:5px solid var(--terra)}
   .col.good h4{color:var(--green-deep)} .col.bad h4{color:var(--terra)}
-  .col ul{margin:0; padding-left:18px} .col li{margin:4px 0; font-size:14px}
+  .col ul{margin:0; padding-left:18px} .col li{margin:5px 0; font-size:14px}
 
   /* priority chips */
   .pnow{color:var(--terra); font-weight:700}
@@ -107,24 +131,26 @@
   .prog{height:10px; background:var(--line); border-radius:99px; overflow:hidden}
   .prog > span{display:block; height:100%; background:linear-gradient(90deg,var(--green),var(--green-deep)); width:0; transition:width .4s}
   .prog-label{font-size:13px; color:var(--muted); margin-top:6px}
-  .ms{display:flex; gap:12px; align-items:flex-start; padding:12px 14px; border:1px solid var(--line); border-radius:10px; margin:8px 0; cursor:pointer; user-select:none; transition:.12s}
-  .ms:hover{border-color:var(--green)}
+  .ms{display:flex; gap:12px; align-items:flex-start; padding:12px 14px; border:1px solid var(--line); border-radius:11px; margin:8px 0; cursor:pointer; user-select:none;
+    transition:transform .14s,box-shadow .14s,border-color .14s,background .14s; box-shadow:var(--shadow-sm)}
+  .ms:hover{border-color:var(--green); transform:translateY(-1px); box-shadow:var(--shadow-md)}
   .ms.done{background:var(--green-soft); border-color:var(--green)}
-  .ms .box{width:22px; height:22px; border:2px solid var(--line); border-radius:6px; flex:none; margin-top:1px; display:grid; place-items:center; font-size:14px; color:transparent}
+  .ms .box{width:24px; height:24px; border:2px solid var(--line); border-radius:7px; flex:none; margin-top:1px; display:grid; place-items:center; font-size:14px; color:transparent; transition:.14s}
   .ms.done .box{background:var(--green); border-color:var(--green); color:#fff}
   .ms .tx{font-size:14px}
   .ms .tx small{display:block; color:var(--muted); font-size:12px; margin-top:1px}
   .ms.done .tx{color:var(--muted); text-decoration:line-through; text-decoration-color:var(--faint)}
 
-  .note{background:var(--amber-soft); border-left:4px solid var(--amber); padding:14px 18px; border-radius:8px; font-size:14px; margin:16px 0}
-  .warn{background:var(--terra-soft); border-left:4px solid var(--terra); padding:14px 18px; border-radius:8px; font-size:14px; margin:16px 0}
+  .note{background:var(--amber-soft); border-left:5px solid var(--amber); padding:14px 18px; border-radius:10px; font-size:14px; margin:16px 0; box-shadow:var(--shadow-sm)}
+  .warn{background:var(--terra-soft); border-left:5px solid var(--terra); padding:14px 18px; border-radius:10px; font-size:14px; margin:16px 0; box-shadow:var(--shadow-sm)}
   .warn b{color:var(--terra)}
 
   footer.foot{padding:32px 0 56px; text-align:center; color:var(--muted); font-size:13px}
   .btnrow{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-bottom:18px}
-  .btn{background:var(--green); color:#fff; border:none; padding:11px 22px; border-radius:8px; font-size:14px; font-weight:600; cursor:pointer; font-family:inherit}
-  .btn:hover{background:var(--green-deep)}
+  .btn{background:var(--green); color:#fff; border:none; padding:12px 24px; border-radius:99px; font-size:14px; font-weight:700; cursor:pointer; font-family:inherit; text-decoration:none; display:inline-flex; align-items:center; gap:7px; box-shadow:var(--shadow-sm); transition:transform .15s,box-shadow .15s,background .15s}
+  .btn:hover{background:var(--green-deep); transform:translateY(-1px); box-shadow:var(--shadow-md)}
   .btn.ghost{background:transparent; color:var(--ink); border:1px solid var(--line)}
+  .btn.ghost:hover{background:var(--panel); border-color:var(--green)}
 
   code{background:var(--green-soft); padding:1px 6px; border-radius:4px; font-size:13px}
   @media print{
@@ -150,8 +176,10 @@
   /* 3-col cards */
   .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:12px 0}
   @media (max-width:680px){.grid3{grid-template-columns:1fr}}
-  .card{background:var(--panel); border:1px solid var(--line); border-left:4px solid var(--amber); border-radius:10px; padding:16px 18px}
-  .card .big{font-size:16px; font-weight:800; color:var(--terra); margin-bottom:4px}
+  .card{background:var(--panel); border:1px solid var(--line); border-left:5px solid var(--amber); border-radius:12px; padding:16px 18px;
+    box-shadow:var(--shadow-sm); transition:transform .18s,box-shadow .18s}
+  .card:hover{transform:translateY(-2px); box-shadow:var(--shadow-md)}
+  .card .big{font-size:17px; font-weight:800; color:var(--terra); margin-bottom:4px}
   .card p{margin:0; font-size:14px}
 </style>
 </head>
@@ -456,7 +484,8 @@
 <footer class="foot">
   <div class="wrap">
     <div class="btnrow">
-      <button class="btn" onclick="window.print()">🖨 打印 / 存 PDF</button>
+      <a class="btn" href="plans/index.html">📅 打开训练日历</a>
+      <button class="btn ghost" onclick="window.print()">🖨 打印 / 存 PDF</button>
       <button class="btn ghost" onclick="localStorage.removeItem('ms_done');renderMs()">重置里程碑</button>
     </div>
     <p>本计划基于个人数据制定,执行前请完成第 0 周体检(含运动负荷心电图)。<br>哮喘随身带药 · 数据驱动 · 循序渐进。</p>
