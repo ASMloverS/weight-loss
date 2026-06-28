@@ -248,7 +248,7 @@ footer span{color:var(--faint)}
         if (plan.week.isMilestone) cell.classList.add('ms');
         if (plan.week.isDeload) cell.classList.add('dl');
         cell.dataset.file = plan.week.file;
-        (function(f){ cell.addEventListener('click', function(){ location.href = f; }); })(plan.week.file);
+        (function(f){ cell.addEventListener('click', function(){ location.href = f + '?start=' + encodeURIComponent(startDate); }); })(plan.week.file);
       }
       if (dateS === todayS) cell.classList.add('today');
 
@@ -343,6 +343,22 @@ footer span{color:var(--faint)}
     }
   }
 
+  // Phase overview: re-compute each week's Mon date (MM-DD) from startDate.
+  // Static .wd values are overwritten; .wn holds the week number (1..156).
+  function renderPhaseOverview(){
+    var wks = document.querySelectorAll('#view-phase .wk');
+    var origin = parseYmd(startDate);
+    for (var i=0; i<wks.length; i++){
+      var wnEl = wks[i].querySelector('.wn');
+      var wdEl = wks[i].querySelector('.wd');
+      if (!wnEl || !wdEl) continue;
+      var wn = parseInt(wnEl.textContent, 10);
+      if (!wn) continue;
+      var d = new Date(origin.getTime() + (wn-1)*7*86400000);
+      wdEl.textContent = pad(d.getMonth()+1) + '-' + pad(d.getDate());
+    }
+  }
+
   // Wire up
   document.getElementById('prev-month').addEventListener('click', function(){ shiftMonth(-1); });
   document.getElementById('next-month').addEventListener('click', function(){ shiftMonth(1); });
@@ -366,6 +382,7 @@ footer span{color:var(--faint)}
     var sd = parseYmd(v);
     viewY = sd.getFullYear(); viewM = sd.getMonth();
     renderMonth(viewY, viewM);
+    renderPhaseOverview();
   });
 
   var dietToggle = document.getElementById('show-diet');
@@ -376,6 +393,7 @@ footer span{color:var(--faint)}
 
   // Initial render: today's month
   renderMonth(viewY, viewM);
+  renderPhaseOverview();
   setTimeout(function(){
     var t = document.querySelector('.cell.today');
     if (t) t.scrollIntoView({block:'center'});

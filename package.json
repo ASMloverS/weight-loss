@@ -7,7 +7,8 @@
     "extract": "node scripts/extract-plans.cjs",
     "test": "node scripts/test-mapping.cjs",
     "build-index": "node scripts/build-index.cjs",
-    "style": "node scripts/apply-style.cjs"
+    "style": "node scripts/apply-style.cjs",
+    "inject-realign": "node scripts/inject-realign.cjs"
   },
   "devDependencies": {
     "cheerio": "^1.0.0"
